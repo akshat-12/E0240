@@ -1,0 +1,54 @@
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 100000000;
+vc_buf_size = 100000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
