@@ -150,17 +150,20 @@ def Q2():
 
     mean_service_time = 2
     injection_rate_array = [rate / 100 for rate in range(5, 50, 5)] + [0.49]
-    simulation_length = 100000000
+    simulation_length = 1000000
     deterministic_occupancy = []
     geometric_occupancy = []
 
     for injection_rate in injection_rate_array:
+        print(f"Running simulation for injection rate: {injection_rate}")
         deterministic_result = single_queue_simulation_geo_d_1(
             injection_rate, mean_service_time, simulation_length
         )
+        print(f"Deterministic service result: {deterministic_result}")
         geometric_result = single_queue_simulation_geo_geo_1(
             injection_rate, mean_service_time, simulation_length
         )
+        print(f"Geometric service result: {geometric_result}")
         deterministic_occupancy.append(deterministic_result[0])
         geometric_occupancy.append(geometric_result[0])
 
@@ -198,9 +201,6 @@ def Q2():
     axes.spines["right"].set_visible(True)
     figure.tight_layout()
     plt.show()
-
-    return injection_rate_array, deterministic_occupancy, geometric_occupancy
-
 
 if __name__ == "__main__":
     Q2()

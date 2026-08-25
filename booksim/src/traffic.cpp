@@ -311,7 +311,6 @@ TraceBasedTrafficPattern::TraceBasedTrafficPattern(int nodes)
   : TrafficPattern(nodes)
 {
 
-    cout << "Loading trace for traffic pattern..." << endl;
     FILE* trace_file = fopen("trace_file.txt", "r");
     
     //resizing the trace
@@ -351,7 +350,6 @@ TraceBasedTrafficPattern::TraceBasedTrafficPattern(int nodes)
         }
         trace_idx++;
     }
-      cout << "Loaded " << trace_idx << " traffic trace entries." << endl;
 
 }
 

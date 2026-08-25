@@ -1464,7 +1464,6 @@ bool TrafficManager::_SingleSim( )
     vector<double> prev_accepted(_classes, 0.0);
     bool clear_last = false;
     int total_phases = 0;
-    bool trace_finished = false;
     while( ( total_phases < _max_samples ) && 
            ( ( _sim_state != running ) || 
              ( converged < 3 ) ) ) {
@@ -1479,22 +1478,12 @@ bool TrafficManager::_SingleSim( )
             //For tracebased, finish simulation if all packets are retired
             if (_flits_retired == _num_flits_in_trace && _traffic[0] == "trace_based") {
                 cout << "Trace is finished in " << _time << " cycles" << endl;
-                trace_finished = true;
+                //return true;
                 break;
             }
             _Step( );
-            if (_traffic[0] == "trace_based" && (_time % 1000) == 0) {
-                cout << "Simulation progress: " << _time << " cycles, "
-                     << _flits_retired << "/" << _num_flits_in_trace
-                     << " flits retired" << endl;
-                cout.flush();
-            }
         }
     
-        if (trace_finished) {
-            return true;
-        }
-
         //cout << _sim_state << endl;
 
         UpdateStats();

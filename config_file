@@ -36,8 +36,8 @@ num_vcs = 1;
 
 vc_allocator = select;
 
-buf_size = 1000000000;
-vc_buf_size = 1000000000;
+buf_size = 100000000;
+vc_buf_size = 100000000;
 output_buffer_size = 1000000000;
 
 private_bufs = 1;

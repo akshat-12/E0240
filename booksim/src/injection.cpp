@@ -199,7 +199,7 @@ bool CustomInjectionProcess::test(int source, int time)
 TraceBasedInjectionProcess::TraceBasedInjectionProcess(int nodes, double rate)
     : InjectionProcess(nodes, rate)
 {
-  cout << "Loading trace for injection process..." << endl;
+    
     FILE* trace_file = fopen("trace_file.txt", "r");
 
     //resizing the trace
@@ -239,7 +239,6 @@ TraceBasedInjectionProcess::TraceBasedInjectionProcess(int nodes, double rate)
         }
         trace_idx++;
     }
-      cout << "Loaded " << trace_idx << " injection trace entries." << endl;
 }
 
 bool TraceBasedInjectionProcess::test(int source, int time)
