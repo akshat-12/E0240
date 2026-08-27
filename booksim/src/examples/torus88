@@ -37,7 +37,7 @@ routing_function = dim_order;
 num_vcs = 2;
 // Traffic
 traffic = uniform;
-injection_rate = 0.02;
-// Simulation
-sim_type = latency;
-sample_period = 1000000;
+injection_rate = 0.01;
+
+sample_period = 1000;
+

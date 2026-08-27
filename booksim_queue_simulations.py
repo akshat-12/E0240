@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 NUM_RUNS = 1
-SIMULATION_LENGTH = 10000
+SIMULATION_LENGTH = 100000
 INJECTION_RATES = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 LATENCY_PATTERN = re.compile(
     r"Packet latency average\s*=\s*([0-9]+(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?)"

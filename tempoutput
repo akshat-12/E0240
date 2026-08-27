@@ -1,0 +1,1006 @@
+Running BookSim for injection rate: 0.1
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 12.4258
+        minimum = 12
+        maximum = 24
+Network latency average = 12.4258
+        minimum = 12
+        maximum = 24
+Slowest packet = 1983
+Flit latency average = 12.4258
+        minimum = 12
+        maximum = 24
+Slowest flit = 1983
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.049885
+        minimum = 0 (at node 1)
+        maximum = 0.09977 (at node 0)
+Accepted packet rate average = 0.049875
+        minimum = 0 (at node 0)
+        maximum = 0.09975 (at node 1)
+Injected flit rate average = 0.049885
+        minimum = 0 (at node 1)
+        maximum = 0.09977 (at node 0)
+Accepted flit rate average= 0.049875
+        minimum = 0 (at node 0)
+        maximum = 0.09975 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 2 (0 measured)
+latency change    = 1
+throughput change = 1
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 108.803
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.082032
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.0010192
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        35232.3
+- Input Write Power:       35234.1
+- Input Leakage Power:     55296
+- Switch Power:            0.000944837
+- Switch Control Power:    0.000446303
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.000339712
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000175319
+- Total Power:             125763
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.1, average packet latency: 12.4258
+Running BookSim for injection rate: 0.2
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 13.5151
+        minimum = 12
+        maximum = 32
+Network latency average = 13.5151
+        minimum = 12
+        maximum = 32
+Slowest packet = 9560
+Flit latency average = 13.5151
+        minimum = 12
+        maximum = 32
+Slowest flit = 9560
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.100565
+        minimum = 0 (at node 1)
+        maximum = 0.20113 (at node 0)
+Accepted packet rate average = 0.100555
+        minimum = 0 (at node 0)
+        maximum = 0.20111 (at node 1)
+Injected flit rate average = 0.100565
+        minimum = 0 (at node 1)
+        maximum = 0.20113 (at node 0)
+Accepted flit rate average= 0.100555
+        minimum = 0 (at node 0)
+        maximum = 0.20111 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 2 (0 measured)
+latency change    = 1
+throughput change = 1
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 218.13
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.165391
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00205489
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        71035.1
+- Input Write Power:       71035.1
+- Input Leakage Power:     55296
+- Switch Power:            0.00190507
+- Switch Control Power:    0.000899878
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.000684958
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000353495
+- Total Power:             197366
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.2, average packet latency: 13.5151
+Running BookSim for injection rate: 0.3
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 20.2503
+        minimum = 12
+        maximum = 72
+Network latency average = 20.2503
+        minimum = 12
+        maximum = 72
+Slowest packet = 18152
+Flit latency average = 20.2503
+        minimum = 12
+        maximum = 72
+Slowest flit = 18152
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.14928
+        minimum = 0 (at node 1)
+        maximum = 0.29856 (at node 0)
+Accepted packet rate average = 0.14926
+        minimum = 0 (at node 0)
+        maximum = 0.29852 (at node 1)
+Injected flit rate average = 0.14928
+        minimum = 0 (at node 1)
+        maximum = 0.29856 (at node 0)
+Accepted flit rate average= 0.14926
+        minimum = 0 (at node 0)
+        maximum = 0.29852 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 4 (0 measured)
+latency change    = 1
+throughput change = 1
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 321.691
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.245496
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00305015
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        105439
+- Input Write Power:       105443
+- Input Leakage Power:     55296
+- Switch Power:            0.00282769
+- Switch Control Power:    0.00133569
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.00101668
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000524693
+- Total Power:             266178
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.3, average packet latency: 20.2503
+Running BookSim for injection rate: 0.4
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 8097.46
+        minimum = 12
+        maximum = 16243
+Network latency average = 8097.46
+        minimum = 12
+        maximum = 16243
+Slowest packet = 33323
+Flit latency average = 8097.46
+        minimum = 12
+        maximum = 16243
+Slowest flit = 33323
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.1992
+        minimum = 0 (at node 1)
+        maximum = 0.3984 (at node 0)
+Accepted packet rate average = 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected flit rate average = 0.1992
+        minimum = 0 (at node 1)
+        maximum = 0.3984 (at node 0)
+Accepted flit rate average= 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 6511 (0 measured)
+latency change    = 1
+throughput change = 1
+Average latency for class 0 exceeded 500 cycles. Aborting simulation.
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 427.606
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.291924
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.003627
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        117720
+- Input Write Power:       129214
+- Input Leakage Power:     55296
+- Switch Power:            0.00315703
+- Switch Control Power:    0.00149126
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.0011351
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000585804
+- Total Power:             302230
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.4, average packet latency: 8097.46
+Running BookSim for injection rate: 0.5
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 16801.6
+        minimum = 12
+        maximum = 33323
+Network latency average = 16801.6
+        minimum = 12
+        maximum = 33323
+Slowest packet = 33329
+Flit latency average = 16801.6
+        minimum = 12
+        maximum = 33323
+Slowest flit = 33329
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.25053
+        minimum = 0 (at node 1)
+        maximum = 0.50106 (at node 0)
+Accepted packet rate average = 0.16665
+        minimum = 0 (at node 0)
+        maximum = 0.3333 (at node 1)
+Injected flit rate average = 0.25053
+        minimum = 0 (at node 1)
+        maximum = 0.50106 (at node 0)
+Accepted flit rate average= 0.16665
+        minimum = 0 (at node 0)
+        maximum = 0.3333 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 16776 (0 measured)
+latency change    = 1
+throughput change = 1
+Average latency for class 0 exceeded 500 cycles. Aborting simulation.
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 691.505
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.320069
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00397669
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        117723
+- Input Write Power:       147343
+- Input Leakage Power:     55296
+- Switch Power:            0.00315713
+- Switch Control Power:    0.0014913
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.00113513
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000585822
+- Total Power:             320363
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.5, average packet latency: 16801.6
+Running BookSim for injection rate: 0.6
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 22148.4
+        minimum = 12
+        maximum = 44443
+Network latency average = 22148.4
+        minimum = 12
+        maximum = 44443
+Slowest packet = 33328
+Flit latency average = 22148.4
+        minimum = 12
+        maximum = 44443
+Slowest flit = 33328
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.30041
+        minimum = 0 (at node 1)
+        maximum = 0.60082 (at node 0)
+Accepted packet rate average = 0.16665
+        minimum = 0 (at node 0)
+        maximum = 0.3333 (at node 1)
+Injected flit rate average = 0.30041
+        minimum = 0 (at node 1)
+        maximum = 0.60082 (at node 0)
+Accepted flit rate average= 0.16665
+        minimum = 0 (at node 0)
+        maximum = 0.3333 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 26752 (0 measured)
+latency change    = 1
+throughput change = 1
+Average latency for class 0 exceeded 500 cycles. Aborting simulation.
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 638.828
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.347414
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00431643
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        117723
+- Input Write Power:       164962
+- Input Leakage Power:     55296
+- Switch Power:            0.00315713
+- Switch Control Power:    0.0014913
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.00113513
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000585822
+- Total Power:             337982
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.6, average packet latency: 22148.4
+Running BookSim for injection rate: 0.7
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 26033.9
+        minimum = 12
+        maximum = 52178
+Network latency average = 26033.9
+        minimum = 12
+        maximum = 52178
+Slowest packet = 33328
+Flit latency average = 26033.9
+        minimum = 12
+        maximum = 52178
+Slowest flit = 33328
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.348915
+        minimum = 0 (at node 1)
+        maximum = 0.69783 (at node 0)
+Accepted packet rate average = 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected flit rate average = 0.348915
+        minimum = 0 (at node 1)
+        maximum = 0.69783 (at node 0)
+Accepted flit rate average= 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 36454 (0 measured)
+latency change    = 1
+throughput change = 1
+Average latency for class 0 exceeded 500 cycles. Aborting simulation.
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 776.973
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.374
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00464675
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        117720
+- Input Write Power:       182090
+- Input Leakage Power:     55296
+- Switch Power:            0.00315703
+- Switch Control Power:    0.00149126
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.0011351
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000585804
+- Total Power:             355106
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.7, average packet latency: 26033.9
+Running BookSim for injection rate: 0.8
+----------------------------------------------------------
+Initialized.
+BEGIN Configuration File: mesh_config_trace_based
+topology = mesh;
+k=2;
+n=1;
+in_ports = 5;
+out_ports = 5;
+
+routing_function = dor;
+arb_type = round_robin;
+
+// Custom Traffic
+//traffic = custom;
+//injection_process = custom;
+
+// Trace-based Traffic
+traffic = trace_based;
+injection_process = trace_based;
+
+// Constant delays
+routing_delay = 1;
+vc_alloc_delay = 1;
+sw_alloc_delay = 1;
+st_final_delay = 1;
+
+packet_size = 1;
+
+
+// Simulation
+sim_type = latency;
+sample_period = 100000;
+warmup_periods = 0;
+max_samples = 1;
+
+injection_rate = 0.01;
+
+num_vcs = 1;
+
+vc_allocator = select;
+
+buf_size = 1000000000;
+vc_buf_size = 1000000000;
+output_buffer_size = 1000000000;
+
+private_bufs = 1;
+private_buf_size = 1;
+
+sim_power = 1;
+
+tech_file = techfile.txt;
+
+channel_width = 32;
+
+//watch_flits = watch_flits.txt;
+//watch_file = watch_file.txt;
+//watch_out = watch_out.txt;
+
+END Configuration File: mesh_config_trace_based
+Class 0:
+Packet latency average = 29180.4
+        minimum = 12
+        maximum = 58364
+Network latency average = 29180.4
+        minimum = 12
+        maximum = 58364
+Slowest packet = 33328
+Flit latency average = 29180.4
+        minimum = 12
+        maximum = 58364
+Slowest flit = 33328
+Fragmentation average = 0
+        minimum = 0
+        maximum = 0
+Injected packet rate average = 0.39972
+        minimum = 0 (at node 1)
+        maximum = 0.79944 (at node 0)
+Accepted packet rate average = 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected flit rate average = 0.39972
+        minimum = 0 (at node 1)
+        maximum = 0.79944 (at node 0)
+Accepted flit rate average= 0.166645
+        minimum = 0 (at node 0)
+        maximum = 0.33329 (at node 1)
+Injected packet length average = 1
+Accepted packet length average = 1
+Total in-flight flits = 46615 (0 measured)
+latency change    = 1
+throughput change = 1
+Average latency for class 0 exceeded 500 cycles. Aborting simulation.
+Too many sample periods needed to converge
+Simulation unstable, ending ...
+Total run time 923.305
+L = 2 K = 8.1 M = 2 N = 1
+-----------------------------------------
+- OCN Power Summary
+- Completion Time:         100000
+- Flit Widths:            32
+- Channel Wire Power:      0.401857
+- Channel Clock Power:     0.0151485
+- Channel Retiming Power:  0.00499286
+- Channel Leakage Power:   0.00571069
+- Input Read Power:        117721
+- Input Write Power:       200034
+- Input Leakage Power:     55296
+- Switch Power:            0.00315713
+- Switch Control Power:    0.0014913
+- Switch Leakage Power:    0.000941226
+- Output DFF Power:        0.00113513
+- Output Clk Power:        0.00568067
+- Output Control Power:    0.000585822
+- Total Power:             373051
+-----------------------------------------
+
+-----------------------------------------
+- OCN Area Summary
+- Channel Area:  0.00113508
+- Switch  Area:  0.000471859
+- Input  Area:   58982.4
+- Output  Area:  0.000157286
+- Total Area:    58982.4
+-----------------------------------------
+Injection rate: 0.8, average packet latency: 29180.4
+Running BookSim for injection rate: 0.9

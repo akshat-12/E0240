@@ -1650,6 +1650,21 @@ bool TrafficManager::_SingleSim( )
             }
         }
     } else {
+        cout << "DEBUG: _SingleSim failed to converge. total_phases=" << total_phases
+             << " _max_samples=" << _max_samples
+             << " converged=" << converged
+             << " _sim_state=" << _sim_state
+             << " time=" << _time << " reset_time=" << _reset_time
+             << " measure_latency=" << _measure_latency << endl;
+        for (int c = 0; c < _classes; ++c) {
+            cout << "DEBUG class " << c << ": plat_avg=" << _plat_stats[c]->Average()
+                 << " lat_thres=" << _latency_thres[c]
+                 << " stop_thres=" << _stopping_threshold[c]
+                 << " acc_stop_thres=" << _acc_stopping_threshold[c]
+                 << " in_flight=" << _total_in_flight_flits[c].size()
+                 << " measured_in_flight=" << _measured_in_flight_flits[c].size()
+                 << endl;
+        }
         cout << "Too many sample periods needed to converge" << endl;
     }
   
@@ -1691,6 +1706,9 @@ bool TrafficManager::Run( )
         }
 
         if ( !_SingleSim( ) ) {
+            cout << "DEBUG: _SingleSim returned false for sim " << sim
+                 << " _max_samples=" << _max_samples
+                 << " time=" << _time << endl;
             cout << "Simulation unstable, ending ..." << endl;
             return false;
         }
