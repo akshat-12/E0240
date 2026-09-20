@@ -17,11 +17,12 @@ samples = []
 
 for _ in range(N):
 
-    # Generate 30 Bernoulli random variables
-    bernoulli_variables = np.random.binomial(1, p, n)
-
-    # Add them (convolution)
-    X = np.sum(bernoulli_variables)
+    X = 0
+    for _ in range(n):
+        # Generate a Bernoulli random variable
+        u = np.random.random()
+        bernoulli_variable = 1 if u < p else 0
+        X += bernoulli_variable
 
     samples.append(X)
 
@@ -48,10 +49,6 @@ theoretical_pmf = np.array([
     comb(n, k) * (p ** k) * ((1 - p) ** (n - k))
     for k in x
 ])
-
-# --------------------------------------------------
-# Plot
-# --------------------------------------------------
 
 plt.figure(figsize=(10, 6))
 
